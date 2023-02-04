@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    color: white;
+    max-width: 100%;
+}
+body{
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: rgb(160, 149, 149);
+}
+.parallax img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+.title{
+    top: 70%;
+    position: absolute;
+    display: flex;
+    font-size: 5em;
+    font-weight: 0;
+    color: goldenrod;
+}
+.countdown{
+    width: 80vw;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+.box{
+    width: 28vmin;
+    height: 28vmin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.5);
+    font-size: 16px;
+}
+.box:after{
+    content: "";
+    position: absolute;
+    background-color: rgba(255,255,255,0.12);
+    height: 100%;
+    width: 50%;
+    left: 0%;
+}
+span.num{
+    background-color: rgba(199, 198, 116, 0.863);
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    font-weight: 600;
+    font-size: 5em;
+}
+span.text{
+    font-size: 1.2em;
+    background-color: #8c8d33;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.5em;
+    font-weight: 400;
+}
+section{
+    display: grid;
+    place-items: center;
+    min-height: 60vh;
+    overflow-x: hidden;
+}
+section::before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    top: 100%;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top,rgb(160, 149, 149), transparent);
+    z-index: 1000;
+    overflow-x: hidden;
+}
+.background{
+    position: absolute;
+}
+.pog1{
+    position: relative;
+    left: 135px;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    
+}
+.pog2{
+    position: relative;
+    right: 135px;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.pog3{
+    position: relative;
+    left: 135px;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.pog4{
+    position: relative;
+    right: 0px;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+@media screen and (max-width: 600px){
+    body{
+        overflow-x: hidden;
+    }
+    .countdown{
+        width: 90vw;
+        flex-wrap: wrap;
+        gap: 30px
+    }
+    .box{
+        width: calc( 50% - 40px );
+        height: 30vmin;
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 600px){
+    body{
+        overflow-x: hidden;
+    }
+    .countdown{
+        gap: 15px;
+    }
+    .box{
+        width: 100%;
+        height: 25vmin;
+        font-size: 8px;
+    }
+}
+@media screen and (max-width: 600px){
+    body{
+        overflow-x: hidden;
+    }
+}
+
+@media screen and (max-width: 600px){
+    body{
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    .pog1{
+        left: 0%;
+    }
+
+    .pog2{
+        right: 0%;
+    }
+
+    .pog3{
+        left: 0%;
+    }
+    .title{
+        opacity: 0;
+    }
+}
